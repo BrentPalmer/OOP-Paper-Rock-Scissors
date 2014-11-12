@@ -1,3 +1,4 @@
+
 class Hand
   include Comparable
 
@@ -28,8 +29,8 @@ class Hand
         puts "Scissors slices Paper!"
     end
   end
-
 end
+
 
 class Player
  include Comparable 
@@ -46,6 +47,7 @@ class Player
   end
 end
 
+
 class Human < Player
   def pick_hand
     begin
@@ -56,6 +58,7 @@ class Human < Player
     self.hand = Hand.new(c)
   end
 end
+
 
 class Computer < Player
   def pick_hand
@@ -82,8 +85,7 @@ class Game
     else
       computer.hand.display_winning_message
       puts "#{computer.name} won!"
-    end
-        
+    end      
   end
 
   def play
